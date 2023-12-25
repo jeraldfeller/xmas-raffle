@@ -2424,7 +2424,7 @@ window.onload = function () {
 
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Apple Kit</span></h1>')
 
-            }, 30000); // 40 seconds
+            }, 40000); // 40 seconds
             winningSound.pause();
         }
         
@@ -2498,7 +2498,7 @@ window.onload = function () {
                 $("#maldivesWinnerList").empty();
                 $("#winnername").html(winner)
                 $("#winnerDescription").html('for winning 50Gm Gold')
-                $("#winnerimage").html('<img src="/assets/images/apple-ipad.gif" alt="">')
+                $("#winnerimage").html('<img src="" alt="">')
                
                 $("#maldivesWinnerList").empty();
                 // Show modal
@@ -2590,7 +2590,7 @@ window.onload = function () {
                 // On CLosing the modal update the text of block
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Rolex</span></h1>')
 
-            }, 300);
+            }, 3000);
 
             winningSound.pause();
         }
