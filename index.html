@@ -1,0 +1,309 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Name Picker</title>
+
+    <script type="text/javascript" src="js/winners.js"></script>
+    
+    <script type="text/javascript" src="js/balrs-raffle.js"></script>
+    <script type="text/javascript" src="js/confetti.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- TS Particle Animation -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/tsparticles-preset-fireworks@2.7.0/tsparticles.preset.fireworks.bundle.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/wheel.css">
+</head>
+
+<body class="sky">
+
+    <section class="header text-center py-4">
+        <img src="/assets/images/STREAKK Logo_final.png" alt="">
+        <h1 class="mt-2 primary-color" style="font-weight: 700;text-transform: uppercase;">Christmas Raffle</h1>
+    </section>
+
+
+    <div class="autio-controls" style="display:none;">
+        <audio controls id="achievement">
+            <source src="/music/mixkit-casino-bling-achievement-2067.wav" type="audio/mpeg">
+        </audio>
+
+        <audio controls id="wheel" loop>
+            <source src="/music/147239759.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <audio controls id="success">
+            <source src="/music/success-fanfare-trumpets-6185.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <audio controls id="tadaa">
+            <source src="/music/tadaa-47995.mp3" type="audio/mpeg">
+        </audio>
+        
+
+        <audio controls id="ticking">
+            <source src="/music/tic-tac-27828.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio controls loop id="firework">
+            <source src="/music/fire-works.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio controls loop id="slotMachine">
+            <source src="/music/slot-machine.mp3" type="audio/mpeg">
+        </audio>
+
+
+        <audio controls id="winningSound">
+            <source src="/music/winning-sound.mp3" type="audio/mpeg">
+        </audio>
+
+
+    </div>
+
+    <div class="total-entry-count">
+        <div class="card">
+            <div class="card-body py-1 my-1">
+                <p class="mb-0 text-center">Total No. of Entries <br> <span
+                        class="primary-color font-weight-bold">3,276</span></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="center row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="sunburst" id="sunburst" style="display: none;position: relative;top:50px">
+                    <img class="" src="assets/images/sunburst.svg" style=" ">
+                </div>
+            </div>
+        </div>
+
+        <div class="center mt-5" id="name-rotation-block">
+            <div class="row justify-content-center ml-0 mr-0">
+                <div class="col-md-12">
+                    <div class="text-center ">
+                        <button class="btn btn-danger btn-lg px-4 mb-2 mt-4 px-4" id="nextDraw" onclick="finalDraw()"
+                            style="color: #fff;font-weight: 700;background: #ed213a; display: none;">Next</button>
+                    </div>
+                </div>
+                <div class="col-md-7" id="scrollingNameList">
+
+                    <div class="text-center" id="progressbarBody" style="display: none;">
+                        <h2>Loading the next round in <span id="seconds"
+                                class="primary-color font-weight-bold"></span></h2>
+                        <progress style="width: 100%;height:40px;" hidden value="0" max="10"
+                            id="progressBar"></progress>
+                    </div>
+                    <div id="names">
+                        <form action="">
+                            <textarea id="names" name="names" rows="4" cols="50"
+                                placeholder="Entre your names here..."></textarea>
+                            <input class="button" id="submitButton" type="submit" value="Submit">
+                        </form>
+                    </div>
+
+
+                    <div id="picker">
+                        <div class="card py-4 card-boder mt-5" style="max-height: 550px;overflow: hidden;position: relative; top: 25px;">
+                            <div class="card-body py-2" style="overflow: hidden; height:100%" id="rolling-names">
+                                <div id="all-names">
+                                    <h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">$1,000 Infra</span></h1>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <div class="row justify-content-center" id="finalNameList">
+
+                    </div>
+
+                   
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-danger btn-lg px-4 mb-2 mt-4 px-4" id="firstDraw"
+                            style="color: #fff;font-weight: 700;background: #ed213a;">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- Final Winner-->
+    <div class="github center" style="display: none; overflow-y: scroll;">
+        <div class="container text-center">
+            <div class="winner-list py-4">
+                <header>
+                    Congratulations to all the winners 🎉
+                </header>
+
+                <div class="mb-3">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card border-0" style="border: none !important;">
+                                <div class="card-body">
+                                    <table class="table table-bordered mb-4">
+                                        <thead class="border">
+                                            <tr>
+                                                <th scope="col">Prize</th>
+                                                <th scope="col">Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="final-winner-list">
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="center mt-5" id="the-final-wheel" style="display: none;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center" style="position: relative; top: 65px;">
+                    <!-- <div class="wheel-spin-box">
+                        <div id="spinwheel">
+                            <div class="wheeldotsround">
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                                <div class="wheeldots"></div>
+                            </div>
+                        </div>
+                        <div id="spin-arrow" class="wheel-spin-arrow">
+                            <svg width="83" height="74" viewBox="0 0 83 74" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M32.9489 5.12466C33.8289 3.59888 35.0943 2.3319 36.618 1.45104C38.1417 0.570174 39.8701 0.106445 41.6294 0.106445C43.3888 0.106445 45.1171 0.570174 46.6409 1.45104C48.1646 2.3319 49.43 3.59888 50.31 5.12466L80.9178 58.1922C81.7993 59.7185 82.264 61.4504 82.265 63.2137C82.2659 64.9769 81.8032 66.7094 80.9234 68.2366C80.0435 69.7639 78.7776 71.0322 77.2529 71.9139C75.7282 72.7955 73.9986 73.2595 72.238 73.2591H11.0223C9.26269 73.259 7.53405 72.7951 6.01016 71.9139C4.48627 71.0327 3.22083 69.7653 2.34102 68.2391C1.46121 66.7128 0.998036 64.9815 0.998047 63.2192C0.998058 61.4569 1.46125 59.7256 2.34108 58.1994L32.9489 5.12466Z"
+                                    fill="#2F911E" />
+                            </svg>
+                        </div>
+                    </div> -->
+
+                    <!-- <img src="/assets/images/final-draw.png" id="finalwheel" class="mw-100" alt="">
+                    <img src="http://www.blimpage.com/pants/wheel_of_lunch_peg.svg" id="peg"><br> -->
+                    <!-- <img src="/assets/images/final-draw.png" id="finalwheel" class="mw-100"><br> -->
+                    <div id="finalwheel" width="530" height="530"><canvas id="pieWheel" width="510" height="510" class="mw-100"></canvas></div><br>
+                    <!-- <img src="http://www.blimpage.com/pants/wheel_of_lunch_peg.svg" id="peg"><br> -->
+                    <img src="/assets/images/peg-arrow.png" id="peg"><br>
+                    <!-- <button id="button" class="spin-click-button">Spin the Wheel</button> -->
+
+                </div>
+
+                <div class="col-md-12 text-center mt-4">
+                    <div>
+                        <button id="button" class="spin-click-button">Spin the Wheel</button>
+                        <!-- <h1 class="font-weight-bold"><span class="primary-color">Congratulations</span>!! <br> You all made for final round of Lucky Draw</h1> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content" style="border-radius: 1.5rem;overflow:hidden">
+                <div class="modal-body "
+                    style="background: url('/assets/images/colorful-confetti-background-with-text-space_1017-32374.webp'); background-position: center; background-size: 225%;border-radius: 1.5rem;">
+                    <div class="float-right">
+                        <button type="button" onclick="stopConfetti()" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                        <!-- <img src="/assets/images/vegas-sincity.gif" alt=""> -->
+                    </div>
+
+                    <div class="text-center py-5">
+                        <h1 class="mb-4 pb-2"><b> Congratulations</b></h1>
+                        <div>
+                            <h2 id="winnername"></h2>
+
+
+                            <div class="my-4" id="winnerimage">
+                            </div>
+                            <p class="pt-2" id="winnerDescription"></p>
+                            <div class="row justify-content-center" id="maldivesWinnerList">
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).bind("contextmenu", function (e) {
+            return false;
+        });
+
+        // window.oncontextmenu = function () {
+        //         return false;
+        //     };
+
+        document.addEventListener("keydown", function (event) {
+            var key = event.key || event.keyCode;
+
+            if (key == 123) {
+                return false;
+            } else if ((event.ctrlKey && event.shiftKey && key == 73) || (event.ctrlKey && event.shiftKey && key == 74)) {
+                return false;
+            }
+        }, false);
+    </script>
+    <script type="text/javascript" src="js/snow.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/wheel.js"></script>
+    <script type="text/javascript" src="js/createWheel.js"></script>
+
+
+</body>
+
+</html>
