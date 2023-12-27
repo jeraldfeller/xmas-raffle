@@ -296,6 +296,7 @@ spin_wheel = function () {
                 $('#exampleModal').modal('hide');
                 // Show final div
                 $('.github').show()
+                loadParticles(configs);
 
             }, 7000);
         }else{
