@@ -2442,13 +2442,14 @@ window.onload = function () {
 
                 slotMachine.pause();
                 winningSound.play();
+                $("#maldivesWinnerList").empty();
 
                 $("#all-names").empty();
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won an Apple Kit</h1>')
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won an Apple Kit ( iPad + iPhone + Watch)</h1>')
                 $('#firstDraw').hide()
 
                 $("#winnerimage").html('<img src="/assets/images/apple-kit.jpg" alt="">')
-                $('#winnerDescription').html('You won an Apple Kit')
+                $('#winnerDescription').html('You won an Apple Kit ( iPad + iPhone + Watch)')
 
                 setWinnerList.sixthDraw.forEach(function (data, i) {
                     var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
@@ -2459,7 +2460,7 @@ window.onload = function () {
 
                 $('#exampleModal').modal('show'); 
 
-                winnerList.push({'winners':setWinnerList.sixthDraw, 'prize':'Apple Kit'}) 
+                winnerList.push({'winners':setWinnerList.sixthDraw, 'prize':'Apple Kit ( iPad + iPhone + Watch)'}) 
 
                 setTimeout(function () {
                     $("#firstDraw").html('Start');
@@ -2752,7 +2753,7 @@ window.onload = function () {
 
                 var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"></span>`;
 
-                winnerList.push({'name':winner, 'prize':'Porsche'}) 
+                winnerList.push({'name':winner, 'prize':'Porsche 718 Spyder'}) 
 
                
                 
@@ -3223,6 +3224,8 @@ function showFinalResults(){
         $("#final-winner-list").prepend(table);     
     });
 
-    loadParticles(configs)
+    confetti.start();
+    winningSound.play();
+    
     $('.github').show()
 }

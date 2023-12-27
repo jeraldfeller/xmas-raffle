@@ -25,7 +25,7 @@ async function loadParticles(options) {
     await tsParticles.load(options);
 
     document.body.style.overflowY = "scroll";
-    document.querySelector('.github').style.top = "100%";
+    document.querySelector('.github').style.top = "70%";
 }
 
 const configs = { 
@@ -250,10 +250,10 @@ spin_wheel = function () {
     
         if(!lastDraw){
             var data = setWinnerList.bmwWinners;
-            var prize = 'BMW';
+            var prize = 'BMW i8 Gran Coupe';
         }else{
             var data = setWinnerList.PorscheWinners;
-            var prize = 'Porsche';
+            var prize = 'Porsche 718 Spyder';
         }
         var setWinner = data.find(function(item) {
             return item.winner === true;
@@ -265,7 +265,7 @@ spin_wheel = function () {
 
         $("#winnername").html(winner)
         $("#winnerDescription").html('for winning a ' + prize);
-        if(prize == 'BMW'){
+        if(prize == 'BMW i8 Gran Coupe'){
             $("#winnerimage").html('<img src="/assets/images/bmw.jpg" class="mx-auto" style="max-width:50%;" alt="">')    
         }else{
             $("#winnerimage").html('<img src="/assets/images/porsche.jpg" alt="">')
@@ -279,7 +279,7 @@ spin_wheel = function () {
             lottery_audio.pause();
             success_audio.play()
             // On CLosing the modal update the text of block
-            // loadParticles(configs);
+            loadParticles(configs);
             $('#headerNames').hide()
             $('#finalwheel').hide()
             
@@ -299,7 +299,7 @@ spin_wheel = function () {
                 $('#exampleModal').modal('hide');
                 // Show final div
                 $('.github').show()
-                loadParticles(configs);
+               
 
             }, 7000);
         }else{
