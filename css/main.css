@@ -144,7 +144,8 @@ canvas {
   color: #000;
   font-size: 1rem;
   font-weight: 600;
-  padding: .3rem 0;
+  padding: 1rem;
+  text-align: left;
 }
 
 .modal h1 {

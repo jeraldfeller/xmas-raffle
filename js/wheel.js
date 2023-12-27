@@ -25,7 +25,14 @@ async function loadParticles(options) {
     await tsParticles.load(options);
 }
 
-const configs = { preset: "fireworks" };
+const configs = { 
+    preset: "fireworks",
+    background: {
+        color: {
+            value: "#E3001E"
+        }
+    }, 
+};
 
 // // loadParticles(configs);
 // // jQuery(function(){
@@ -256,9 +263,9 @@ spin_wheel = function () {
         $("#winnername").html(winner)
         $("#winnerDescription").html('for winning a ' + prize);
         if(prize == 'BMW'){
-            $("#winnerimage").html('<img src="https://images.unsplash.com/photo-1651120210960-eabb36a3e764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" class="mx-auto" style="max-width:50%;" alt="">')    
+            $("#winnerimage").html('<img src="/assets/images/bmw.jpg" class="mx-auto" style="max-width:50%;" alt="">')    
         }else{
-            $("#winnerimage").html('<img src="https://images.unsplash.com/photo-1651120210960-eabb36a3e764?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" class="mx-auto" style="max-width:50%;" alt="">')
+            $("#winnerimage").html('<img src="/assets/images/porsche.jpg" alt="">')
         }
         
         // Show modal
@@ -293,6 +300,11 @@ spin_wheel = function () {
             }, 7000);
         }else{
             lottery_audio.pause();
+
+
+            confetti.start();
+            winningSound.play();
+
             wheel.style.webkitTransform = "rotate(0deg)";
             wheel.style.mozTransform = "rotate(0deg)";
             wheel.style.msTransform = "rotate(0deg)";
@@ -302,13 +314,15 @@ spin_wheel = function () {
 
             $("#all-names").empty();
 
+
+
             $("#name-rotation-block").show()
            
             $('#finalNameList').empty()
             $('#nextDraw').hide()
             $('#firstDraw').show()
             // On CLosing the modal update the text of block
-            $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Porsche</span></h1>')
+            $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Porsche 718 Spyder</span></h1>')
             $("#the-final-wheel").hide()
         }
 

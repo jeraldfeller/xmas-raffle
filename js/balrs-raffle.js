@@ -10,6 +10,8 @@ window.onload = function () {
     const slotMachine = document.getElementById('slotMachine');    
     const winningSound = document.getElementById('winningSound');    
 
+    const rollTime = 30000; 
+    const modalRollTime = 11000;
     
     
     let i = 0;
@@ -2148,7 +2150,6 @@ window.onload = function () {
 
         if (count == 1) {
 
-            $('.total-entry-count').hide()
             
             // $("#firstDraw").html('<b>Start 10th Draw</b>');
             
@@ -2166,10 +2167,11 @@ window.onload = function () {
                 
                 $("#all-names").empty();
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won $1,000 infra</h1>')
+              
                 $('#firstDraw').hide()
 
 
-                $("#winnerimage").html('<img src="" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/infra.jpg" alt="">')
                 $('#winnerDescription').html('You won $1,000 infra')
 
                 setWinnerList.firstDraw.forEach(function (data, i) {
@@ -2189,15 +2191,15 @@ window.onload = function () {
 
                 setTimeout(function () {
                   
-                    $("#firstDraw").html('Next Draw');
+                    $("#firstDraw").html('Start');
                     $('#firstDraw').show()
                     
-                }, 11000);
+                }, modalRollTime);
                 
 
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">iPhone 15</span></h1>')
 
-            }, 30000); // 30 seconds
+            }, rollTime); // 30 seconds
             winningSound.pause();
 
 
@@ -2243,13 +2245,13 @@ window.onload = function () {
             //     // On CLosing the modal update the text of block
             //     $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">iPhone</span></h1>')
 
-            // }, 30000);
+            // }, 300);
 
             // winningSound.pause();
         }
 
         else if (count == 2) {
-            $('.total-entry-count').hide()
+           
             $("#maldivesWinnerList").empty();
             // $("#firstDraw").html('<b>Start 10th Draw</b>');
             
@@ -2290,20 +2292,20 @@ window.onload = function () {
 
                 setTimeout(function () {
                   
-                    $("#firstDraw").html('Next Draw');
+                    $("#firstDraw").html('Start');
                     $('#firstDraw').show()
                     
-                }, 11000);
+                }, modalRollTime);
                 
 
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">MacBook</span></h1>')
 
-            }, 30000); // 30 seconds
+            }, rollTime); // 30 seconds
             winningSound.pause();
         }
 
         else if (count == 3) {
-            $('.total-entry-count').hide()
+          
             $("#maldivesWinnerList").empty();
             // Code for the 3rd draw (Macbook)
             setTimeout(function(){ 
@@ -2319,7 +2321,7 @@ window.onload = function () {
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won a MacBook</h1>')
                 $('#firstDraw').hide()
 
-                $("#winnerimage").html('<img src="/assets/images/apple-macbook.gif" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/RtITeu.gif" alt="">')
                 $('#winnerDescription').html('You won a MacBook')
 
                 setWinnerList.thirdDraw.forEach(function (data, i) {
@@ -2334,18 +2336,18 @@ window.onload = function () {
                 winnerList.push({'winners':setWinnerList.thirdDraw, 'prize':'MacBook'}) 
 
                 setTimeout(function () {
-                    $("#firstDraw").html('Next Draw');
+                    $("#firstDraw").html('Start');
                     $('#firstDraw').show()
-                }, 11000);
+                }, modalRollTime);
 
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Gold Ring</span></h1>')
 
-            }, 30000); // 30 seconds
+            }, rollTime); // 30 seconds
             winningSound.pause();
         }
         
         else if (count == 4) {
-            $('.total-entry-count').hide()
+          
             $("#maldivesWinnerList").empty();
             // Code for the 4th draw (Gold Ring)
             setTimeout(function(){ 
@@ -2361,7 +2363,7 @@ window.onload = function () {
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won a Gold Ring</h1>')
                 $('#firstDraw').hide()
 
-                $("#winnerimage").html('<img src="/assets/images/gold-ring.gif" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/gold-ring.jpg" alt="">')
                 $('#winnerDescription').html('You won a Gold Ring')
 
                 setWinnerList.fourthDraw.forEach(function (data, i) {
@@ -2376,20 +2378,20 @@ window.onload = function () {
                 winnerList.push({'winners':setWinnerList.fourthDraw, 'prize':'Gold Ring'}) 
 
                 setTimeout(function () {
-                    $("#firstDraw").html('Next Draw');
+                    $("#firstDraw").html('Start');
                     $('#firstDraw').show()
-                }, 11000);
+                }, modalRollTime);
 
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Ignite Turkiyea</span></h1>')
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Ignite Turkiye</span></h1>')
 
-            }, 30000); // 30 seconds
+            }, rollTime); // 30 seconds
             winningSound.pause();
         }
         
         else if (count == 5) {
-            $('.total-entry-count').hide()
+        
             $("#maldivesWinnerList").empty();
-            // Code for the 5th draw (Ignite Turkiyea)
+            // Code for the 5th draw (Ignite Turkiye)
             setTimeout(function(){ 
                 clearInterval(intervalHandle); 
                 $('#sunburst').show()
@@ -2400,11 +2402,11 @@ window.onload = function () {
                 winningSound.play();
 
                 $("#all-names").empty();
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won Ignite Turkiyea</h1>')
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won Ignite Turkiye</h1>')
                 $('#firstDraw').hide()
 
-                $("#winnerimage").html('<img src="/assets/images/ignite-turkiyea.gif" alt="">')
-                $('#winnerDescription').html('You won Ignite Turkiyea')
+                $("#winnerimage").html('<img src="/assets/images/ignite.jpg" alt="">')
+                $('#winnerDescription').html('You won Ignite Turkiye')
 
                 setWinnerList.fifthDraw.forEach(function (data, i) {
                     var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
@@ -2415,12 +2417,12 @@ window.onload = function () {
 
                 $('#exampleModal').modal('show'); 
 
-                winnerList.push({'winners':setWinnerList.fifthDraw, 'prize':'Ignite Turkiyea'}) 
+                winnerList.push({'winners':setWinnerList.fifthDraw, 'prize':'Ignite Turkiye'}) 
 
                 setTimeout(function () {
-                    $("#firstDraw").html('Next Draw');
+                    $("#firstDraw").html('Start');
                     $('#firstDraw').show()
-                }, 11000);
+                }, modalRollTime);
 
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Apple Kit</span></h1>')
 
@@ -2429,7 +2431,7 @@ window.onload = function () {
         }
         
         else if (count == 6) {
-            $('.total-entry-count').hide()
+          
             $("#maldivesWinnerList").empty();
             // Code for the 6th draw (Apple Kit)
             setTimeout(function(){ 
@@ -2445,7 +2447,7 @@ window.onload = function () {
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations! You won an Apple Kit</h1>')
                 $('#firstDraw').hide()
 
-                $("#winnerimage").html('<img src="" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/apple-kit.jpg" alt="">')
                 $('#winnerDescription').html('You won an Apple Kit')
 
                 setWinnerList.sixthDraw.forEach(function (data, i) {
@@ -2460,17 +2462,17 @@ window.onload = function () {
                 winnerList.push({'winners':setWinnerList.sixthDraw, 'prize':'Apple Kit'}) 
 
                 setTimeout(function () {
-                    $("#firstDraw").html('Next Draw');
+                    $("#firstDraw").html('Start');
                     $('#firstDraw').show()
-                }, 11000);
+                }, modalRollTime);
 
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">50Gm Gold </span></h1>')
 
-            }, 30000); // 30 seconds
+            }, rollTime); // 30 seconds
             winningSound.pause();
         }else if(count == 7){
             // Show animation for first winner
-            $('.total-entry-count').hide()
+          
             $("#maldivesWinnerList").empty();
             setTimeout(function(){ 
                 clearInterval(intervalHandle); 
@@ -2498,7 +2500,7 @@ window.onload = function () {
                 $("#maldivesWinnerList").empty();
                 $("#winnername").html(winner)
                 $("#winnerDescription").html('for winning 50Gm Gold')
-                $("#winnerimage").html('<img src="" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/gold.jpg" alt="">')
                
                 $("#maldivesWinnerList").empty();
                 // Show modal
@@ -2513,14 +2515,53 @@ window.onload = function () {
                 // On CLosing the modal update the text of block
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">3N/4D Atlantis the Royal + Private Yacht tour</span></h1>')
 
-            }, 30000);
+            }, rollTime);
 
             winningSound.pause();
         }
 
         else if(count == 8){
             // Show animation for eighth winner
-            $('.total-entry-count').hide()
+          
+            $("#maldivesWinnerList").empty();
+            setTimeout(function(){ 
+                clearInterval(intervalHandle); 
+
+                confetti.start();
+                
+                slotMachine.pause();
+                winningSound.play();
+
+                $('#sunburst').show()
+                $('#firstDraw').show()
+                
+                // get the winner name in a variable & push it to winnerList
+                var winner = `${setWinnerList.eightDrawA.code} ${setWinnerList.eightDrawA.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.eightDrawA.countryCode}.svg"></span>`;
+                winnerList.push({'name':winner, 'prize':'3N/4D Atlantis the Royal + Private Yacht tour'}) 
+
+                console.log(winnerList);
+                // Pass winner list to the modal
+
+                $("#winnername").html(winner)
+                $("#winnerDescription").html('for winning 3N/4D Atlantis the Royal + Private Yacht tour')
+                $("#winnerimage").html('<img src="/assets/images/atlantis.jpg" alt="">')
+               
+                // Show modal
+                $('#exampleModal').modal('show'); 
+
+                $("#all-names").empty();
+                  
+                // On CLosing the modal update the text of block
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Trip to Las Vegas</span></h1>')
+
+            }, rollTime);
+
+            winningSound.pause();
+        }
+
+        else if(count == 9){
+            // Show animation for eighth winner
+          
             $("#maldivesWinnerList").empty();
             setTimeout(function(){ 
                 clearInterval(intervalHandle); 
@@ -2542,7 +2583,7 @@ window.onload = function () {
 
                 $("#winnername").html(winner)
                 $("#winnerDescription").html('for winning Trip to Las Vegas')
-                $("#winnerimage").html('<img src="/assets/images/las-vegas.gif" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/las-vegas.jpg" alt="">')
                
                 // Show modal
                 $('#exampleModal').modal('show'); 
@@ -2552,13 +2593,13 @@ window.onload = function () {
                 // On CLosing the modal update the text of block
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">3N/4D Formula 1</span></h1>')
 
-            }, 30000);
+            }, rollTime);
 
             winningSound.pause();
         }
-        else if(count == 9){
+        else if(count == 10){
             // Show animation for ninth winner
-            $('.total-entry-count').hide()
+          
             $("#maldivesWinnerList").empty();
             setTimeout(function(){ 
                 clearInterval(intervalHandle); 
@@ -2580,7 +2621,7 @@ window.onload = function () {
 
                 $("#winnername").html(winner)
                 $("#winnerDescription").html('for winning 3N/4D Formula 1')
-                $("#winnerimage").html('<img src="/assets/images/formula-1.gif" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/f1.jpg" alt="">')
                
                 // Show modal
                 $('#exampleModal').modal('show'); 
@@ -2590,13 +2631,13 @@ window.onload = function () {
                 // On CLosing the modal update the text of block
                 $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Rolex</span></h1>')
 
-            }, 3000);
+            }, rollTime);
 
             winningSound.pause();
         }
-        else if(count == 10){
+        else if(count == 11){
             // Show animation for tenth winner
-            $('.total-entry-count').hide()
+           
             $("#maldivesWinnerList").empty();
             setTimeout(function(){ 
                 clearInterval(intervalHandle); 
@@ -2618,7 +2659,7 @@ window.onload = function () {
 
                 $("#winnername").html(winner)
                 $("#winnerDescription").html('for winning Rolex')
-                $("#winnerimage").html('<img src="/assets/images/rolex.gif" alt="">')
+                $("#winnerimage").html('<img src="/assets/images/rolex.jpg" alt="">')
                
                 // Show modal
                 $('#exampleModal').modal('show'); 
@@ -2626,12 +2667,12 @@ window.onload = function () {
                 $("#all-names").empty();
                   
                 // On CLosing the modal update the text of block
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">BMW</span></h1>')
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">BMW i8 Gran Coupe</span></h1>')
 
-            }, 30000);
+            }, rollTime);
 
             winningSound.pause();
-        }else if(count == 11){
+        }else if(count == 12){
             $("#maldivesWinnerList").empty();
             $('.total-entry-count').show()
             $("#maldivesWinnerList").hide()
@@ -2660,7 +2701,7 @@ window.onload = function () {
 
                 var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"></span>`;
 
-                winnerList.push({'name':winner, 'prize':'BMW'}) 
+                winnerList.push({'name':winner, 'prize':'BMW i8 Gran Coupe'}) 
 
                
                 
@@ -2670,7 +2711,7 @@ window.onload = function () {
                 $("#all-names").empty();
                   
                 // On CLosing the modal update the text of block
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations on reaching one step closer to winning a BMW.</h1>').slideDown()
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations on reaching one step closer to winning a BMW i8 Gran Coupe.</h1>').slideDown()
 
                 // tadaa_audio.play();
 
@@ -2679,10 +2720,10 @@ window.onload = function () {
                 passFinalNamesToDiv(setWinnerList.bmwWinners)
 
 
-            }, 30000);
+            }, rollTime);
         }
 
-        else if(count == 12){
+        else if(count == 13){
             $("#maldivesWinnerList").empty();
             $('.total-entry-count').show()
             $("#maldivesWinnerList").hide()
@@ -2721,7 +2762,7 @@ window.onload = function () {
                 $("#all-names").empty();
                   
                 // On CLosing the modal update the text of block
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations on reaching one step closer to winning a Porsche.</h1>').slideDown()
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations on reaching one step closer to winning a Porsche 718 Spyder.</h1>').slideDown()
 
                 // tadaa_audio.play();
 
@@ -2752,10 +2793,13 @@ window.onload = function () {
                 });
 
 
-            }, 30000);
+            }, rollTime);
         }
 
         
+        $('#exampleModal').on('hidden.bs.modal', function () {
+            confetti.remove();
+        });
 
         
     });
@@ -2799,3 +2843,386 @@ function finalDraw() {
 
 }
 
+function showFinalResults(){
+    var sampleWinner = [
+        {
+            "winners": [
+                {
+                    "code": "1A2B3C",
+                    "name": "John",
+                    "lastName": "Simons",
+                    "countryCode": "US",
+                    "country": "United States"
+                },
+                {
+                    "code": "4D5E6F",
+                    "name": "Jane",
+                    "lastName": "Burnham",
+                    "countryCode": "GB",
+                    "country": "United Kingdom"
+                },
+                {
+                    "code": "7G8H9I",
+                    "name": "Pedro",
+                    "lastName": "Gonzalez",
+                    "countryCode": "ES",
+                    "country": "Spain"
+                },
+                {
+                    "code": "0J1K2L",
+                    "name": "Francois",
+                    "lastName": "Dupont",
+                    "countryCode": "FR",
+                    "country": "France"
+                },
+                {
+                    "code": "3M4N5O",
+                    "name": "Heinrich",
+                    "lastName": "Schmidt",
+                    "countryCode": "DE",
+                    "country": "Germany"
+                }
+            ],
+            "prize": "$1,000 Infra"
+        },
+        {
+            "winners": [
+                {
+                    "code": "5ZMEP4",
+                    "name": "Maria",
+                    "lastName": "Gonzalez",
+                    "countryCode": "ES",
+                    "country": "Spain"
+                },
+                {
+                    "code": "T8TRKI",
+                    "name": "Ken",
+                    "lastName": "Tanaka",
+                    "countryCode": "JP",
+                    "country": "Japan"
+                },
+                {
+                    "code": "MVUJDS",
+                    "name": "Mei",
+                    "lastName": "Li",
+                    "countryCode": "CN",
+                    "country": "China"
+                },
+                {
+                    "code": "LQB9HT",
+                    "name": "Raj",
+                    "lastName": "Patel",
+                    "countryCode": "IN",
+                    "country": "India"
+                },
+                {
+                    "code": "VFETUC",
+                    "name": "Linda",
+                    "lastName": "Johnson",
+                    "countryCode": "US",
+                    "country": "United States"
+                }
+            ],
+            "prize": "iPhone 15"
+        },
+        {
+            "winners": [
+                {
+                    "code": "C7BEKV",
+                    "name": "Carmen",
+                    "lastName": "Sanchez",
+                    "countryCode": "ES",
+                    "country": "Spain"
+                },
+                {
+                    "code": "T2DCLD",
+                    "name": "Carlos",
+                    "lastName": "Silva",
+                    "countryCode": "BR",
+                    "country": "Brazil"
+                },
+                {
+                    "code": "ZH2EAW",
+                    "name": "Marie",
+                    "lastName": "Leblanc",
+                    "countryCode": "FR",
+                    "country": "France"
+                },
+                {
+                    "code": "ZX11C9",
+                    "name": "Luca",
+                    "lastName": "Rossi",
+                    "countryCode": "IT",
+                    "country": "Italy"
+                },
+                {
+                    "code": "CMRC93",
+                    "name": "Taro",
+                    "lastName": "Yamada",
+                    "countryCode": "JP",
+                    "country": "Japan"
+                }
+            ],
+            "prize": "MacBook"
+        },
+        {
+            "winners": [
+                {
+                    "code": "LTH9FT",
+                    "name": "Kevin",
+                    "lastName": "Smith",
+                    "countryCode": "US",
+                    "country": "United States"
+                },
+                {
+                    "code": "V6NZE2",
+                    "name": "Luis",
+                    "lastName": "Garcia",
+                    "countryCode": "ES",
+                    "country": "Spain"
+                },
+                {
+                    "code": "OCQFK1",
+                    "name": "Max",
+                    "lastName": "Müller",
+                    "countryCode": "DE",
+                    "country": "Germany"
+                },
+                {
+                    "code": "I926NI",
+                    "name": "Oliver",
+                    "lastName": "Taylor",
+                    "countryCode": "GB",
+                    "country": "United Kingdom"
+                },
+                {
+                    "code": "D4N30Q",
+                    "name": "Lucas",
+                    "lastName": "Silva",
+                    "countryCode": "BR",
+                    "country": "Brazil"
+                }
+            ],
+            "prize": "Gold Ring"
+        },
+        {
+            "winners": [
+                {
+                    "code": "IDZPTB",
+                    "name": "Matteo",
+                    "lastName": "Ricci",
+                    "countryCode": "IT",
+                    "country": "Italy"
+                },
+                {
+                    "code": "YRL5LX",
+                    "name": "Julia",
+                    "lastName": "Silva",
+                    "countryCode": "BR",
+                    "country": "Brazil"
+                },
+                {
+                    "code": "YHIIQ1",
+                    "name": "Sita",
+                    "lastName": "Patel",
+                    "countryCode": "IN",
+                    "country": "India"
+                },
+                {
+                    "code": "BBR8A6",
+                    "name": "Giovanni",
+                    "lastName": "Rossi",
+                    "countryCode": "IT",
+                    "country": "Italy"
+                },
+                {
+                    "code": "VY3SWP",
+                    "name": "Ling",
+                    "lastName": "Wang",
+                    "countryCode": "CN",
+                    "country": "China"
+                },
+                {
+                    "code": "0P7ZC2",
+                    "name": "Priya",
+                    "lastName": "Patel",
+                    "countryCode": "IN",
+                    "country": "India"
+                },
+                {
+                    "code": "QQRWQZ",
+                    "name": "Sophia",
+                    "lastName": "Müller",
+                    "countryCode": "DE",
+                    "country": "Germany"
+                },
+                {
+                    "code": "EQWT8R",
+                    "name": "Harry",
+                    "lastName": "Taylor",
+                    "countryCode": "GB",
+                    "country": "United Kingdom"
+                },
+                {
+                    "code": "JATCZC",
+                    "name": "Hiroshi",
+                    "lastName": "Sato",
+                    "countryCode": "JP",
+                    "country": "Japan"
+                },
+                {
+                    "code": "OSVXTB",
+                    "name": "Sofia",
+                    "lastName": "Rossi",
+                    "countryCode": "IT",
+                    "country": "Italy"
+                },
+                {
+                    "code": "0VA2UB",
+                    "name": "Arjun",
+                    "lastName": "Patel",
+                    "countryCode": "IN",
+                    "country": "India"
+                },
+                {
+                    "code": "6S4MEF",
+                    "name": "Sophie",
+                    "lastName": "Taylor",
+                    "countryCode": "GB",
+                    "country": "United Kingdom"
+                },
+                {
+                    "code": "RWWK1E",
+                    "name": "Ana",
+                    "lastName": "Silva",
+                    "countryCode": "BR",
+                    "country": "Brazil"
+                },
+                {
+                    "code": "O5Z1O6",
+                    "name": "Wei",
+                    "lastName": "Li",
+                    "countryCode": "CN",
+                    "country": "China"
+                },
+                {
+                    "code": "ZDC0IC",
+                    "name": "Giulia",
+                    "lastName": "Ricci",
+                    "countryCode": "IT",
+                    "country": "Italy"
+                },
+                {
+                    "code": "4BI9IQ",
+                    "name": "Pierre",
+                    "lastName": "Leblanc",
+                    "countryCode": "FR",
+                    "country": "France"
+                },
+                {
+                    "code": "95NNMT",
+                    "name": "Hannah",
+                    "lastName": "Müller",
+                    "countryCode": "DE",
+                    "country": "Germany"
+                },
+                {
+                    "code": "JQZK8K",
+                    "name": "Emma",
+                    "lastName": "Leblanc",
+                    "countryCode": "FR",
+                    "country": "France"
+                },
+                {
+                    "code": "8NFRW0",
+                    "name": "Amelia",
+                    "lastName": "Taylor",
+                    "countryCode": "GB",
+                    "country": "United Kingdom"
+                },
+                {
+                    "code": "PRWZSK",
+                    "name": "Jun",
+                    "lastName": "Li",
+                    "countryCode": "CN",
+                    "country": "China"
+                }
+            ],
+            "prize": "Ignite Turkiye"
+        },
+        {
+            "winners": [
+                {
+                    "code": "6MZHDF",
+                    "name": "Jose",
+                    "lastName": "Garcia",
+                    "countryCode": "ES",
+                    "country": "Spain"
+                },
+                {
+                    "code": "SE1I9I",
+                    "name": "Mike",
+                    "lastName": "Smith",
+                    "countryCode": "US",
+                    "country": "United States"
+                },
+                {
+                    "code": "P6X82I",
+                    "name": "Luc",
+                    "lastName": "Leblanc",
+                    "countryCode": "FR",
+                    "country": "France"
+                }
+            ],
+            "prize": "Apple Kit"
+        },
+        {
+            "name": "03BG4G Johnattan &nbsp;<span><img width=\"70\" src=\"https://countryflagsapi.netlify.app/flag/GB.svg\"></span>",
+            "prize": "50Gm Gold"
+        },
+        {
+            "name": "0N3ZG2 Oskar &nbsp;<span><img width=\"70\" src=\"https://countryflagsapi.netlify.app/flag/NO.svg\"></span>",
+            "prize": "3N/4D Atlantis the Royal + Private Yacht tour"
+        },
+        {
+            "name": "XAIR8V Marco &nbsp;<span><img width=\"70\" src=\"https://countryflagsapi.netlify.app/flag/IT.svg\"></span>",
+            "prize": "Trip to Las Vegas"
+        },
+        {
+            "name": "R3QJNK Akira &nbsp;<span><img width=\"70\" src=\"https://countryflagsapi.netlify.app/flag/JP.svg\"></span>",
+            "prize": "3N/4D Formula 1"
+        },
+        {
+            "name": "7K8BZQ Gema &nbsp;<span><img width=\"70\" src=\"https://countryflagsapi.netlify.app/flag/FR.svg\"></span>",
+            "prize": "Rolex"
+        },
+        {
+            "name": "2A2B3C SEIFERT &nbsp;<span><img width=\"70\" src=\"https://countryflagsapi.netlify.app/flag/DE.svg\"></span>",
+            "prize": "BMW i8 Gran Coupe"
+        },
+        {
+            "name": "CZ2F1A MROWINSKI &nbsp;<span><img width=\"70\" src=\"https://countryflagsapi.netlify.app/flag/PL.svg\"></span>",
+            "prize": "Porsche"
+        }
+    ];
+
+
+    sampleWinner.forEach(function(winner){
+        if(typeof winner.winners != 'undefined'){
+            var prizeItem = winner.prize;
+            var winnerListsData = winner.winners;
+            var winnerListHtml = '';
+            winnerListsData.forEach(function(w){
+                winnerListHtml += `${w.code} ${w.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${w.countryCode}.svg"></span><br>`;
+            }); 
+            var table = '<tr><td>'+prizeItem+'</td><td>'+winnerListHtml+'</td></tr>';
+        }else{
+            var table = '<tr><td>'+winner['prize']+'</td><td>'+winner['name']+'</td></tr>';
+                          
+        }
+        $("#final-winner-list").prepend(table);     
+    });
+
+    loadParticles(configs)
+    $('.github').show()
+}

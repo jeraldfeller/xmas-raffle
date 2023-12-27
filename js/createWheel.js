@@ -20,7 +20,7 @@ function generateWheel(data){
         ctx.beginPath();
         ctx.moveTo(centerX, centerY);
         ctx.arc(centerX, centerY, radius, startAngle, endAngle);
-        ctx.fillStyle = getRandomColor();
+        ctx.fillStyle = getRandomColor(index);
         ctx.fill();
     
         // Draw code and name in the center of the slice
@@ -44,10 +44,7 @@ function generateWheel(data){
 
     // Function to generate random colors
    
-    function getRandomColor() {
-      const colorIndex = Math.floor(Math.random() * colors.length);
-      const color = colors[colorIndex];
-      // Remove the selected color from the array
-      colors = colors.filter((_, index) => index !== colorIndex);
-      return color;
+    function getRandomColor(index) {
+        const colorIndex = index % colors.length; // Use modulo to cycle through colors
+        return colors[colorIndex];
     }

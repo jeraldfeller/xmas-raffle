@@ -92,6 +92,13 @@ const setWinnerList = {
             "countryCode": "GB",
             "country": "United Kingdom"
         },
+        "eightDrawA":{
+            "code": "0N3ZG2",
+            "name": "Oskar",
+            "lastName": "Berg",
+            "countryCode": "NO",
+            "country": "Norway"
+        },
         "eighthDraw": {
             "code": "XAIR8V",
             "name": "Marco",
@@ -213,13 +220,13 @@ const setWinnerList = {
         },
         {
             "code": "RZ2F1U",
-            "name": "MONTEMARANO",
+            "name": "NOAH",
             "country": "Switzerland",
             "countryCode": "CH"
         },
         {
             "code": "GH1F9U",
-            "name": "Vihaan",
+            "name": "VIHAAN",
             "country": "India",
             "countryCode": "IN"
         }
