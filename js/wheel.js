@@ -23,6 +23,9 @@ async function loadParticles(options) {
     await loadFireworksPreset(tsParticles);
 
     await tsParticles.load(options);
+
+    document.body.style.overflowY = "scroll";
+    document.querySelector('.github').style.top = "100%";
 }
 
 const configs = { 
