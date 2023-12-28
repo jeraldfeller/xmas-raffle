@@ -190,7 +190,7 @@ canvas {
 @media screen and (max-width: 1366px) {
   /* Your code here */
   .github.center{
-    top: 100%;
+    top: 100% !important;
   }
 }
 
