@@ -103,16 +103,147 @@ window.onload = function () {
         ];
  
         let namesList = [
+          "70EP46 EARN WORLD",
+          "NWE859 Andrea Jansen",
+          "LC7311 Mi Mi",
+          "SCT5C9 Christer Taray",
+          "J19949 Ghaly ElShaer",
+          "009G5E Sabine Kinder",
+          "4QC7ZN Alexandre PAYNE",
+          "31D8M2 GFS Allfinanz",
+          "P6SJ47 Zbigniew Wiacek",
+          "C9630R hoda Saad",
+          "D7P8R9 Farida Emadeldine",
+          "S91RSW Nada Emadeldine",
+          "A2ETS9 saradepointrois alfonso",
+          "9H33CT Pocket Money",
+          "UI063X Robin Sehgal",
+          "VU58R5 Earn World",
+          "72D9NR Pocket Money",
+          "X54W83 Pocket Money",
+          "68JP46 Streakk Austria",
+          "Y1Y4K8 Arndt Oldenburg",
+          "3452BY Ahmed Emadeldine",
+          "S3527X Werner Steinke",
+          "5B9IOH Ritschi Ritsch",
+          "04R9E6 Valentina Mandzhieva",
+          "XI51YO Celestine Schmitz",
+          "W200VB Turgay Alpaslan",
+          "8J4QF8 Celestine Schmitz",
+          "C9AE7B Turgay Alpaslan",
+          "290721 Lucy Schmitz",
+          "K5Q300 Erik Schneider",
+          "WV9S0W Celestine Schmitz",
+          "FW1I89 Lara Teraz",
+          "1G9P58 Lara Teraz",
+          "F6O57F Franci Teraz",
+          "V59XH5 Mohamed Adel",
+          "6B40QH Clara Karb",
+          "58RL1E Lawrence Timbreza",
+          "KKA1QN Tina Grosswendt",
+          "5BS2Q9 Izabela Szymko",
+          "24S7I4 siwy siwy",
+          "5RP3GM Otto One",
+          "611RTX Sarita Civnik",
+          "38771E Rudolf Neudertc",
+          "YJNHDF Rudolf Neudert",
+          "7T3U76 ebru gunes",
+          "D0S6M5 Pikl Iztok",
+          "H8O27M Sabry Abdelhalem",
+          "C87UUE Gundula ReiseggerDrei",
+          "9V8680 Seile Anca",
+          "LVCCK0 Seile Anca",
+          "98MDQJ Seile Anca",
+          "1YZ9EH Seile Anca",
+          "P35HUQ Seile Anca",
+          "HINK6V Seile Anca",
+          "UW5KXC laetitia wakantanka",
+          "038Y82 Gregoire POTOT",
+          "D2U60H Roshan Sachdev",
+          "3MRJ8W Khalid Alshahwani",
+          "H51W5I sarah Suubi",
+          "ALR49G Selwan Askar",
+          "DVA786 Seile Anca",
+          "7F5VU7 Seile Anca",
+          "WG9MS9 Seile Anca",
+          "L1GYD7 Seile Anca",
+          "QWYN0F Refaat Ramadan",
+          "41RL7O Mohamed Frh",
+          "Z540N3 Daniel Wenk",
+          "S54UK6 Melanie BasicNeumair",
+          "M56BB6 Melanie BasicNeumair",
+          "UI5952 Melanie BasicNeumair",
+          "E9G6B2 Melanie BasicNeumair",
+          "A1S3ZI Melanie BasicNeumair",
+          "HC99FP Melanie BasicNeumair",
+          "UYKJS9 Melanie BasicNeumair",
+          "2HUT39 Melanie BasicNeumair",
+          "VAJ2C6 Melanie BasicNeumair",
+          "8L0BP7 laetitia wakantanka",
+          "21OULE Anja Kassner",
+          "85QN9P Angelo Casazza",
+          "H33KZ1 Steffi Katze",
+          "4K65WO Clara Karb",
+          "FLN4I8 Siaka Hien",
+          "7Z4H6R Jose Garcia",
+          "S5434I Kyong Lim",
+          "5GLOT4 Troy Foy",
+          "83A61Q Marek Bazyl",
+          "32K401 Juergen Niggemann",
+          "4X1WTJ Pikl Iztok",
+          "THR643 Rudolf Neudert",
+          "974GA0 Imtaj Hussain",
+          "YSLOX6 Abdul Hasan",
+          "3U20G8 HeidiPOOLd Hammerer",
+          "1ZLG75 Oliver Nillson",
+          "65H9PT Jonas Hajek",
+          " 5SQTS6 Sanjay Mishra",
+          "VW9LAI Manuel Gramoso",
+          " 5E8F6W Emmett koch",
+          " Q3Y340 Ngoc Pham",
+          "40H04S Juan Cruz",
+          " J296U5 Simon Berger",
+          "L43ZC6 Hildegard Wenning",
+          " 5Y9Z8Y Filip Haugen",
+          " DZU14Q Josef Brenner",
+          "Y8F665 Onani Loboo",
+          "8HIEEY laetitia wakantanka",
+          " T1B60P Shadab Mirza",
+          "M62VES Hildegard Wenning",
+          " 8DZ64Z  Antonio Ramos",
+          " 95F4L0 Klaus Earn",
+          "E4PFN3 laetitia wakantanka",
+          "7JJJ8P Karina Kellner",
+          " E5B91J Frank Weber",
+          " L25QUP Chibuike Attah",
+          " 8UBNO9 Isaro Kalisa",
+          " 600ZG9 Amit Semwal",
+          " 6JAXQR Noah Holm",
+          "I3NS7Q laetitia wakantanka",
+          "149C29 Malek Koda",
+          "7U2T40 Mahu Wetin",
+          "190L04 BlackForest DigitalAssets",
+          "C7AU26 Niklas Prime",
+          "5K2XWY Steffi Tom",
+          "N4RXPQ Haifa Ahmed",
+          "FW1QQ7 Manuel Gramoso",
+          "QJK2M3 Manuel Gramoso",
+          " N25FW0 Jimiyu Njeri",
+          "YP17YS Hermann Wenning",
+          "V26P96 Hermann Wenning",
+          "4JJWQ6 Hildegard Wenning",
+          "N55S4Z CEO WorldOneVision",
+          "C337YM CEO WorldOneVision",
+          "560FEO Hildegard Wenning",
           "TSF7FR Hermann Wenning",
           "1N7H2D CEO WorldOneVision",
           "0VTU45 Hermann Wenning",
-          "M62VES Hildegard Wenning",
+          " 5YF151 Ashton White",
           "75D2MS CEO WorldOneVision",
           "D8DY1P Hildegard Wenning",
-          "8HIEEY laetitia wakantanka",
+          " 5RUU23 Andrea Conti",
           "5140Q4 Manuel Gramoso",
           "CKRWV5 Manuel Gramoso",
-          "Y8F665 Onani Loboo",
           "65MQIT Manuel Gramoso",
           "X7VQOF Sitrek Mitrekbir",
           "J9W24K Sitrek Mitrekbir",
@@ -756,7 +887,7 @@ window.onload = function () {
                     $('#firstDraw').show()
                 }, modalRollTime);
 
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Apple Kit</span></h1>')
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Apple kit ( IPad+ iPhone + Watch)</span></h1>')
 
             }, 40000); // 40 seconds
             winningSound.pause();
@@ -825,7 +956,7 @@ window.onload = function () {
                 
 
 
-                var winner = `${setWinnerList.seventhDraw.code} ${setWinnerList.seventhDraw.name} ${setWinnerList.seventhDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.seventhDraw.countryCode}.svg"></span>`;
+                var winner = `${setWinnerList.seventhDraw.code} ${setWinnerList.seventhDraw.name} ${setWinnerList.seventhDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.seventhDraw.countryCode}.svg"> <small>(${setWinnerList.seventhDraw.country})</small></span>`;
                 winnerList.push({'name':winner, 'prize':'50Gm Gold'}) 
 
                 console.log(winnerList);
@@ -869,7 +1000,7 @@ window.onload = function () {
                 $('#firstDraw').show()
                 
                 // get the winner name in a variable & push it to winnerList
-                var winner = `${setWinnerList.eightDrawA.code} ${setWinnerList.eightDrawA.name} ${setWinnerList.eightDrawA.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.eightDrawA.countryCode}.svg"></span>`;
+                var winner = `${setWinnerList.eightDrawA.code} ${setWinnerList.eightDrawA.name} ${setWinnerList.eightDrawA.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.eightDrawA.countryCode}.svg"> <small>(${setWinnerList.eightDrawA.country})</small></span>`;
                 winnerList.push({'name':winner, 'prize':'3N/4D Atlantis the Royal + Private Yacht tour'}) 
 
                 console.log(winnerList);
@@ -908,7 +1039,7 @@ window.onload = function () {
                 $('#firstDraw').show()
 
                 // get the winner name in a variable & push it to winnerList
-                var winner = `${setWinnerList.eightDraw.code} ${setWinnerList.eightDraw.name} ${setWinnerList.eightDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.eightDraw.countryCode}.svg"></span>`;
+                var winner = `${setWinnerList.eightDraw.code} ${setWinnerList.eightDraw.name} ${setWinnerList.eightDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.eightDraw.countryCode}.svg"> <small>(${setWinnerList.eightDraw.country})</small></span>`;
                 winnerList.push({'name':winner, 'prize':'Trip to Las Vegas'}) 
 
                 console.log(winnerList);
@@ -946,7 +1077,7 @@ window.onload = function () {
                 $('#firstDraw').show()
 
                 // get the winner name in a variable & push it to winnerList
-                var winner = `${setWinnerList.ninthDraw.code} ${setWinnerList.ninthDraw.name} ${setWinnerList.ninthDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.ninthDraw.countryCode}.svg"></span>`;
+                var winner = `${setWinnerList.ninthDraw.code} ${setWinnerList.ninthDraw.name} ${setWinnerList.ninthDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.ninthDraw.countryCode}.svg"> <small>(${setWinnerList.ninthDraw.country})</small></span>`;
                 winnerList.push({'name':winner, 'prize':'3N/4D Formula 1'}) 
 
                 console.log(winnerList);
@@ -984,7 +1115,7 @@ window.onload = function () {
                 $('#firstDraw').show()
 
                 // get the winner name in a variable & push it to winnerList
-                var winner = `${setWinnerList.tenthDraw.code} ${setWinnerList.tenthDraw.name} ${setWinnerList.tenthDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.tenthDraw.countryCode}.svg"></span>`;
+                var winner = `${setWinnerList.tenthDraw.code} ${setWinnerList.tenthDraw.name} ${setWinnerList.tenthDraw.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.tenthDraw.countryCode}.svg"> <small>(${setWinnerList.tenthDraw.country})</small></span>`;
                 winnerList.push({'name':winner, 'prize':'Rolex'}) 
 
                 console.log(winnerList);
@@ -1032,7 +1163,7 @@ window.onload = function () {
                     return item.winner === true;
                 });
 
-                var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"></span>`;
+                var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"> <small>(${setWinner.country})</small></span>`;
 
                 winnerList.push({'name':winner, 'prize':'BMW i8 Gran Coupe'}) 
 
@@ -1083,7 +1214,7 @@ window.onload = function () {
                     return item.winner === true;
                 });
 
-                var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"></span>`;
+                var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"> <small>(${setWinner.country})</small></span>`;
 
                 winnerList.push({'name':winner, 'prize':'Porsche 718 Spyder'}) 
 
@@ -1115,7 +1246,7 @@ window.onload = function () {
                         var winnerListsData = winner.winners;
                         var winnerListHtml = '';
                         winnerListsData.forEach(function(w){
-                            winnerListHtml += `${w.code} ${w.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${w.countryCode}.svg"></span><br>`;
+                            winnerListHtml += `${w.code} ${w.name} ${w.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${w.countryCode}.svg"> <small>(${w.country})</small></span><br>`;
                         }); 
                         var table = '<tr><td>'+prizeItem+'</td><td>'+winnerListHtml+'</td></tr>';
                     }else{

@@ -259,7 +259,7 @@ spin_wheel = function () {
             return item.winner === true;
         });
 
-        var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"></span>`;
+        var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"> <small>(${setWinner.country})</small></span>`;
 
 
 
@@ -276,14 +276,16 @@ spin_wheel = function () {
 
         $('#button').show()
         if(lastDraw){
+            confetti.start();
+            winningSound.play();
             lottery_audio.pause();
             success_audio.play()
             // On CLosing the modal update the text of block
-            loadParticles(configs);
+          
             $('#headerNames').hide()
             $('#finalwheel').hide()
             
-            firework.play();
+       
 
             
 
@@ -295,13 +297,16 @@ spin_wheel = function () {
 
 
             setTimeout(function () {
+                confetti.remove();
                 // hide the modal
                 $('#exampleModal').modal('hide');
                 // Show final div
                 $('.github').show()
+                loadParticles(configs);
+                firework.play();
                
 
-            }, 7000);
+            }, 10000);
         }else{
             lottery_audio.pause();
 
