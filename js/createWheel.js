@@ -33,8 +33,8 @@ function generateWheel(data){
         ctx.save(); // Save the current state
         ctx.translate(textX, textY); // Move to the center of the slice
         ctx.rotate(sliceMiddleAngle - Math.PI / 1); // Rotate to angle the text -45 degrees more
-        ctx.fillText(item.code, 0, 0); // Adjusted the y position
-        ctx.fillText(item.name, 0, 20); // Adjusted the y position
+        ctx.fillText(item.code, -20, 0); // Adjusted the y position
+        ctx.fillText(item.name, -20, 20); // Adjusted the y position
         ctx.restore(); // Restore to the previous state
     
         startAngle = endAngle;
