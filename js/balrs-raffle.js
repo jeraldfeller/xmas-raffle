@@ -507,7 +507,7 @@ window.onload = function () {
                 $('#winnerDescription').html('You won $1,000 infra')
 
                 setWinnerList.firstDraw.forEach(function (data, i) {
-                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
+                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.code} ${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
                     setTimeout(function () {
                         $("#maldivesWinnerList").append(project_card).slideDown();
                     }, 1000 * i);
@@ -608,7 +608,7 @@ window.onload = function () {
                 $('#winnerDescription').html('You won iPhone 15')
 
                 setWinnerList.secondDraw.forEach(function (data, i) {
-                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
+                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.code} ${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
                     setTimeout(function () {
                         $("#maldivesWinnerList").append(project_card).slideDown();
                     }, 1000 * i);
@@ -657,7 +657,7 @@ window.onload = function () {
                 $('#winnerDescription').html('You won a MacBook')
 
                 setWinnerList.thirdDraw.forEach(function (data, i) {
-                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
+                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.code} ${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
                     setTimeout(function () {
                         $("#maldivesWinnerList").append(project_card).slideDown();
                     }, 1000 * i);
@@ -699,7 +699,7 @@ window.onload = function () {
                 $('#winnerDescription').html('You won a Gold Ring')
 
                 setWinnerList.fourthDraw.forEach(function (data, i) {
-                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
+                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.code} ${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
                     setTimeout(function () {
                         $("#maldivesWinnerList").append(project_card).slideDown();
                     }, 1000 * i);
@@ -741,7 +741,7 @@ window.onload = function () {
                 $('#winnerDescription').html('You won Ignite Turkiye')
 
                 setWinnerList.fifthDraw.forEach(function (data, i) {
-                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
+                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.code} ${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
                     setTimeout(function () {
                         $("#maldivesWinnerList").append(project_card).slideDown();
                     }, 1000 * i);
@@ -784,7 +784,7 @@ window.onload = function () {
                 $('#winnerDescription').html('You won an Apple Kit ( iPad + iPhone + Watch)')
 
                 setWinnerList.sixthDraw.forEach(function (data, i) {
-                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
+                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.code} ${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
                     setTimeout(function () {
                         $("#maldivesWinnerList").append(project_card).slideDown();
                     }, 1000 * i);
