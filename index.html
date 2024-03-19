@@ -14,7 +14,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -26,7 +26,7 @@
         
        
 
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=1.9">
     <link rel="stylesheet" type="text/css" href="css/wheel.css">
     <style>
         @media screen and (max-width: 2560px) {
@@ -40,9 +40,16 @@
 
 <body class="sky">
 
-    <section class="header text-center py-4">
-        <img src="/assets/images/Earn.Word_logo_Christmas_1.png" alt="">
-        <h1 class="mt-2 primary-color" style="font-weight: 700;text-transform: uppercase;">Christmas Raffle</h1>
+    <section class="header text-center">
+        <img src="/assets/images/logo.png" alt="">
+    </section>
+    <section>
+        <div class="">
+            <img src="/assets/images/2024.png">
+        </div>
+    </section>
+    <section>
+        <h1>CHINESE NEW YEAR RAFFLE</h1>
     </section>
 
 
@@ -132,35 +139,41 @@
 
 
                     <div id="picker">
-                        <div class="card py-4 card-boder mt-5" style="max-height: 550px;overflow: hidden;position: relative; top: 25px;">
+                        <div class="card py-4 card-boder mt-5" style="max-height: 550px;overflow: hidden;position: relative; top: 100px;">
                             <div class="card-body py-2" style="overflow: hidden; height:100%" id="rolling-names">
                                 <div id="all-names">
-                                    <h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">$1,000 Infra</span></h1>
+                                    <h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Mercedes Benz</span></h1>
                                 </div>
                             </div>
                         </div>
                         
                     </div>
                 </div>
-                <div class="col-md-12 mt-4">
+                <div class="col-md-12 mt-4" style="padding-top: 60px; ">
                     <div class="row justify-content-center" id="finalNameList">
 
                     </div>
 
                    
-
-                    <div class="text-center mt-4">
-                        <button class="btn btn-danger btn-lg px-4 mb-2 mt-4 px-4" id="firstDraw"
-                            style="color: #fff;font-weight: 700;background: #ed213a;">Start</button>
+                    <div id="action-container">
+                        <div class="text-center mt-4 cta-container">
+                            <button class="btn btn-danger btn-lg px-4 mb-2 mt-4 px-4 cta" id="firstDraw">Start</button>
+                        </div>
+                        <div class="total-no-entries-container">
+                            <div class="total-entries">
+                                <p class="text">Total No. of Entries</p>
+                                <p class="value">3,500</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
 
-
+        
     </div>
-
+    
     <!-- Final Winner-->
     <div class="github center" style="display: none; overflow-y: scroll;">
         <div class="container text-center">
@@ -319,7 +332,7 @@
             }
         }, false);
     </script>
-    <script type="text/javascript" src="js/snow.js"></script>
+    <!-- <script type="text/javascript" src="js/snow.js"></script> -->
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript" src="js/wheel.js"></script>
     <script type="text/javascript" src="js/createWheel.js"></script>

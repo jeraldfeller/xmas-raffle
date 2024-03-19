@@ -1,41 +1,14 @@
 const setWinnerList = {
-    "firstDraw": [
+    "firstDraw": 
         {
             "code": "5SQTS6",
             "name": "Sanjay",
             "lastName": "Mishra",
             "countryCode": "IN",
-            "country": "India"
-        },
-        {
-            "code": "5E8F6W",
-            "name": "Emmett",
-            "lastName": "Koch",
-            "countryCode": "DE",
-            "country": "Germany"
-        },
-        {
-            "code": "DZU14Q",
-            "name": "Josef",
-            "lastName": "Brenner",
-            "countryCode": "AT",
-            "country": "Austria"
-        },
-        {
-            "code": "6JAXQR",
-            "name": "Noah",
-            "lastName": "Holm",
-            "countryCode": "SE",
-            "country": "Sweden"
-        },
-        {
-            "code": "T1B60P",
-            "name": "Shadab",
-            "lastName": "Mirza",
-            "countryCode": "PK",
-            "country": "Pakistan"
+            "country": "India",
+            "winner": true
         }
-    ],
+    ,
         "secondDraw": [
           {"code": "C337YM", "name": "CEO", "lastName": "WorldOneVision", "countryCode": "CH", "country": "Switzerland"},
           {"code": "SCT5C9", "name": "Christer", "lastName": "Taray", "countryCode": "PH", "country": "Philippines"},
