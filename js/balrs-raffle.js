@@ -10,7 +10,7 @@ window.onload = function () {
     const slotMachine = document.getElementById('slotMachine');    
     const winningSound = document.getElementById('winningSound');    
 
-    const rollTime = 3000; 
+    const rollTime = 30000; 
     const modalRollTime = 11000;
     
     
