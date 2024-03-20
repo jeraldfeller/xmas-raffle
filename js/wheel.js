@@ -248,13 +248,9 @@ spin_wheel = function () {
 
     setTimeout(function() {
     
-        if(!lastDraw){
-            var data = setWinnerList.bmwWinners;
-            var prize = 'BMW i8 Gran Coupe';
-        }else{
-            var data = setWinnerList.PorscheWinners;
-            var prize = 'Porsche 718 Spyder';
-        }
+        var data = setWinnerList.firstDraw;
+        var prize = 'Mercedes Benz';
+
         var setWinner = data.find(function(item) {
             return item.winner === true;
         });
@@ -265,75 +261,74 @@ spin_wheel = function () {
 
         $("#winnername").html(winner)
         $("#winnerDescription").html('for winning a ' + prize);
-        if(prize == 'BMW i8 Gran Coupe'){
-            $("#winnerimage").html('<img src="/assets/images/bmw.jpg" class="mx-auto" style="max-width:50%;" alt="">')    
-        }else{
-            $("#winnerimage").html('<img src="/assets/images/porsche.jpg" alt="">')
-        }
-        
+        $("#winnerimage").html('<img src="/assets/images/porsche.jpg" alt="">')
+
+        lottery_audio.pause();
+        confetti.start();
+        success_audio.play()
         // Show modal
         $('#exampleModal').modal('show');
 
         $('#button').show()
-        if(lastDraw){
-            confetti.start();
-            winningSound.play();
-            lottery_audio.pause();
-            success_audio.play()
-            // On CLosing the modal update the text of block
+        // if(lastDraw){
+        //     confetti.start();
+        //     winningSound.play();
+        //     lottery_audio.pause();
+        //     success_audio.play()
+        //     // On CLosing the modal update the text of block
           
-            $('#headerNames').hide()
-            $('#finalwheel').hide()
+        //     $('#headerNames').hide()
+        //     $('#finalwheel').hide()
             
        
 
             
 
-            $('#button').hide()
+        //     $('#button').hide()
 
-            $('#exampleModal').on('hidden.bs.modal', function () {
-                $('.github').show()
-            });
+        //     $('#exampleModal').on('hidden.bs.modal', function () {
+        //         $('.github').show()
+        //     });
 
 
-            setTimeout(function () {
-                confetti.remove();
-                // hide the modal
-                $('#exampleModal').modal('hide');
-                // Show final div
-                $('.github').show()
-                loadParticles(configs);
-                firework.play();
+        //     setTimeout(function () {
+        //         confetti.remove();
+        //         // hide the modal
+        //         $('#exampleModal').modal('hide');
+        //         // Show final div
+        //         $('.github').show()
+        //         loadParticles(configs);
+        //         firework.play();
                
 
-            }, 10000);
-        }else{
-            lottery_audio.pause();
+        //     }, 10000);
+        // }else{
+        //     lottery_audio.pause();
 
 
-            confetti.start();
-            winningSound.play();
+        //     confetti.start();
+        //     winningSound.play();
 
-            wheel.style.webkitTransform = "rotate(0deg)";
-            wheel.style.mozTransform = "rotate(0deg)";
-            wheel.style.msTransform = "rotate(0deg)";
-            wheel.style.transform = "rotate(0deg)";
-            // Show modal
-            $('#exampleModal').modal('show'); 
+        //     wheel.style.webkitTransform = "rotate(0deg)";
+        //     wheel.style.mozTransform = "rotate(0deg)";
+        //     wheel.style.msTransform = "rotate(0deg)";
+        //     wheel.style.transform = "rotate(0deg)";
+        //     // Show modal
+        //     $('#exampleModal').modal('show'); 
 
-            $("#all-names").empty();
+        //     $("#all-names").empty();
 
 
 
-            $("#name-rotation-block").show()
+        //     $("#name-rotation-block").show()
            
-            $('#finalNameList').empty()
-            $('#nextDraw').hide()
-            $('#firstDraw').show()
-            // On CLosing the modal update the text of block
-            $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Porsche 718 Spyder</span></h1>')
-            $("#the-final-wheel").hide()
-        }
+        //     $('#finalNameList').empty()
+        //     $('#nextDraw').hide()
+        //     $('#firstDraw').show()
+        //     // On CLosing the modal update the text of block
+        //     $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">Mercedes Benz</span></h1>')
+        //     $("#the-final-wheel").hide()
+        // }
 
 
     }, 20500);

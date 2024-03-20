@@ -35,6 +35,10 @@ body {
   border: 16px solid transparent !important;
 }
 
+#finalNameList .card{
+  border-radius: 1rem !important;
+}
+
 /* .card-boder{
     border-color: #fff200 !important;
 } */
@@ -43,7 +47,7 @@ h1#headerNames {
   color: #000;
   opacity: 1;
   font-weight: 600;
-  font-size: 64px;
+  font-size: 54px;
   text-align: center;
   cursor: pointer;
   padding-top: .25rem;
@@ -208,14 +212,17 @@ section h1{
   line-height: 1.2;
 }
 
-.cta{
-  color: #ed213a;
-    font-weight: 700;
-    background: #fff;
+.cta, #nextDraw, #button{
+  color: #ed213a !important;
+    font-weight: 700 !important;
+    background: #fff !important;
     border-radius: 40px;
     font-size: 30px;
     width: 180px;
     height: 76px;
+}
+#button{
+  width: 300px;
 }
 .total-entries{
   width: 300px;
@@ -235,5 +242,11 @@ section h1{
 }
 .total-no-entries-container, .cta-container{
   margin-top: 80px !important;
+}
+#finalNameList{
+  margin-top: 24px;
+}
+#the-final-wheel{
+  top: 50% !important;
 }
 /*# sourceMappingURL=main.css.map */

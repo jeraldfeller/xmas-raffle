@@ -1,13 +1,76 @@
 const setWinnerList = {
-    "firstDraw": 
+    "firstDraw": [
         {
-            "code": "5SQTS6",
-            "name": "Sanjay",
-            "lastName": "Mishra",
-            "countryCode": "IN",
-            "country": "India",
+            "code": "K5Q300",
+            "name": "Erik Schneider",
+            "country": "Switzerland",
+            "countryCode": "CH",
             "winner": true
+        },
+        {
+            "code": "1YZ9EH",
+            "name": "Seile Anca",
+            "country": "Germany",
+            "countryCode": "DE",
+            "winner": false
+        },
+        {
+            "code": "6N5JGV",
+            "name": "Francuz Boguslawa",
+            "country": "Poland",
+            "countryCode": "PL",
+            "winner": false
+        },
+        {
+            "code": "5140Q4",
+            "name": "Manuel Gramoso",
+            "country": "Portugal",
+            "countryCode": "PT",
+            "winner": false
+        },
+        {
+            "code": "V6885",
+            "name": "Jeanlouis Mora",
+            "country": "France",
+            "countryCode": "FR",
+            "winner": false
+        },
+        {
+            "code": "BUR6H4",
+            "name": "Berthold Gruber",
+            "country": "Germany",
+            "countryCode": "DE",
+            "winner": false
+        },
+        {
+            "code": "QDW5P1",
+            "name": "Shadi Thogersen",
+            "country": "Spain",
+            "countryCode": "ES",
+            "winner": false
+        },
+        {
+            "code": "H1T11J",
+            "name": "Rajesh Vansh",
+            "country": "India",
+            "countryCode": "IN",
+            "winner": false
+        },
+        {
+            "code": "560FEO",
+            "name": "Hildegard Wenning",
+            "country": "Germany",
+            "countryCode": "DE",
+            "winner": false
+        },
+        {
+            "code": "H9YI6J",
+            "name": "Saif Chouai",
+            "country": "Morocco",
+            "countryCode": "MA",
+            "winner": false
         }
+    ]
     ,
         "secondDraw": [
           {"code": "C337YM", "name": "CEO", "lastName": "WorldOneVision", "countryCode": "CH", "country": "Switzerland"},

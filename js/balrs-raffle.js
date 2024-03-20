@@ -630,39 +630,56 @@ window.onload = function () {
                 winningSound.play();
 
         
-                var winner = `${setWinnerList.firstDraw.code} ${setWinnerList.firstDraw.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinnerList.firstDraw.countryCode}.svg"> <small>(${setWinnerList.firstDraw.country})</small></span>`;
-                var prize = 'Mercedes Benz'
-        
-        
-                $("#winnername").html(winner)
-                $("#winnerDescription").html('for winning a ' + prize);
-                $("#winnerimage").html('<img src="/assets/images/porsche.jpg" alt="">')
-                
-                // Show modal
-                $('#exampleModal').modal('show');
-                $('#scrollingNameList').hide();
-    
-
-                setWinnerList.firstDraw.forEach(function (data, i) {
-                    var project_card = `<div class="col-md-2 mt-4"><div class="card"><div class="card-body text-center"><h5 class="mb-0">${data.code} ${data.name}<br>${data.lastName}<br><span><img width="56" src="https://countryflagsapi.netlify.app/flag/${data.countryCode}.svg">  <br> <small>(${data.country})</small> </span></h5></div></div></div>`;
-                    setTimeout(function () {
-                        $("#maldivesWinnerList").append(project_card).slideDown();
-                    }, 1000 * i);
-                    
+                var setWinner = setWinnerList.firstDraw.find(function(item) {
+                    return item.winner === true;
                 });
 
-            
-                winnerList.push({'winners':setWinnerList.firstDraw, 'prize':'Mercedes Benz'}) 
+                var winner = `${setWinner.code} ${setWinner.name} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${setWinner.countryCode}.svg"> <small>(${setWinner.country})</small></span>`;
 
-                setTimeout(function () {
-                  
-                    $("#firstDraw").html('Start');
-                    $('#firstDraw').show()
-                    
-                }, modalRollTime);
+                winnerList.push({'name':winner, 'prize':'Mercedes Benz'}); 
+
+               
                 
+                // Send Final Name List to wheeel
+                // wheel(teslaDraw);
+                
+                $("#all-names").empty();
+                  
+                // On CLosing the modal update the text of block
+                $('#all-names').html('<h1 class="mb-0" id="headerNames">Congratulations on reaching one step closer to winning a Mercedes Benz.</h1>').slideDown()
 
-                $('#all-names').html('<h1 class="mb-0" id="headerNames">Draw for the <span class="primary-color">iPhone 15</span></h1>')
+                // tadaa_audio.play();
+
+                generateWheel(setWinnerList.firstDraw);
+
+                passFinalNamesToDiv(setWinnerList.firstDraw)
+
+                $('#button').attr('data-final', '1');
+                $('#button').attr('data-prize', 'Mercedes Benz');
+
+
+                $('#mainText').addClass('d-none');
+                $('#yearSection').addClass('d-none');
+                $('#name-rotation-block').css('top', '50%');
+
+
+                // Send Winner List to Final Popup
+                console.log(winnerList);
+                winnerList.forEach(function(winner){
+                    if(typeof winner.winners != 'undefined'){
+                        var prizeItem = winner.prize;
+                        var winnerListsData = winner.winners;
+                        var winnerListHtml = '';
+                        winnerListsData.forEach(function(w){
+                            winnerListHtml += `${w.code} ${w.name} ${w.lastName} &nbsp;<span><img width="70" src="https://countryflagsapi.netlify.app/flag/${w.countryCode}.svg"> <small>(${w.country})</small></span><br>`;
+                        }); 
+                        var table = '<tr><td>'+prizeItem+'</td><td>'+winnerListHtml+'</td></tr>';
+                    }else{
+                        var table = '<tr><td>'+winner['prize']+'</td><td>'+winner['name']+'</td></tr>';
+                                      
+                    }
+                    $("#final-winner-list").prepend(table);     
+                });
 
             }, rollTime); // 30 seconds
             winningSound.pause();
