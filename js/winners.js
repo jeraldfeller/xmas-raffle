@@ -1,73 +1,73 @@
 const setWinnerList = {
     "firstDraw": [
         {
-            "code": "K5Q300",
-            "name": "Erik Schneider",
-            "country": "Switzerland",
-            "countryCode": "CH",
+            "code": "K87G66",
+            "name": "Diego Lopez",
+            "country": "Spain",
+            "countryCode": "ES",
             "winner": true
         },
         {
-            "code": "1YZ9EH",
-            "name": "Seile Anca",
+            "code": "3VGM54",
+            "name": "Christian HintzDrei",
+            "country": "Austria",
+            "countryCode": "AT",
+            "winner": false
+        },
+        {
+            "code": "I2Y98D",
+            "name": "Michael Liehmann",
             "country": "Germany",
             "countryCode": "DE",
             "winner": false
         },
         {
-            "code": "6N5JGV",
-            "name": "Francuz Boguslawa",
-            "country": "Poland",
-            "countryCode": "PL",
+            "code": "U27HO4",
+            "name": "Karsten Rolighed",
+            "country": "Denmark",
+            "countryCode": "DK",
             "winner": false
         },
         {
-            "code": "5140Q4",
-            "name": "Manuel Gramoso",
-            "country": "Portugal",
-            "countryCode": "PT",
+            "code": "EHSPFH",
+            "name": "Steffi Katze",
+            "country": "Austria",
+            "countryCode": "AT",
             "winner": false
         },
         {
-            "code": "V6885",
-            "name": "Jeanlouis Mora",
-            "country": "France",
-            "countryCode": "FR",
+            "code": "V75A40",
+            "name": "Lexi One",
+            "country": "Sweden",
+            "countryCode": "SE",
             "winner": false
         },
         {
-            "code": "BUR6H4",
-            "name": "Berthold Gruber",
+            "code": "5M2ARK",
+            "name": "Christos Serbesis",
             "country": "Germany",
             "countryCode": "DE",
             "winner": false
         },
         {
-            "code": "QDW5P1",
-            "name": "Shadi Thogersen",
-            "country": "Spain",
-            "countryCode": "ES",
-            "winner": false
-        },
-        {
-            "code": "H1T11J",
-            "name": "Rajesh Vansh",
-            "country": "India",
-            "countryCode": "IN",
-            "winner": false
-        },
-        {
-            "code": "560FEO",
-            "name": "Hildegard Wenning",
+            "code": "18G923",
+            "name": "Michael Liehmann",
             "country": "Germany",
             "countryCode": "DE",
             "winner": false
         },
         {
-            "code": "H9YI6J",
-            "name": "Saif Chouai",
-            "country": "Morocco",
-            "countryCode": "MA",
+            "code": "6C5P40",
+            "name": "Sunbir Yatirim",
+            "country": "Turkey",
+            "countryCode": "TR",
+            "winner": false
+        },
+        {
+            "code": "5K9PL5",
+            "name": "Summer Salama",
+            "country": "Egypt",
+            "countryCode": "EG",
             "winner": false
         }
     ]

@@ -261,7 +261,7 @@ spin_wheel = function () {
 
         $("#winnername").html(winner)
         $("#winnerDescription").html('for winning a ' + prize);
-        $("#winnerimage").html('<img src="/assets/images/porsche.jpg" alt="">')
+        $("#winnerimage").html('<img src="/assets/images/mercedes.jpg" alt="">')
 
         lottery_audio.pause();
         confetti.start();
