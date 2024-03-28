@@ -50,10 +50,10 @@ const setWinnerList = {
             "winner": false
         },
         {
-            "code": "18G923",
-            "name": "Michael Liehmann",
-            "country": "Germany",
-            "countryCode": "DE",
+            "code": "B88417",
+            "name": "Maikel Andres",
+            "country": "Spain",
+            "countryCode": "ES",
             "winner": false
         },
         {
